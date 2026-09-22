@@ -9,13 +9,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import br.senac.tads.dsw.exemplo4_turmaB.model.Funcionario;
 import br.senac.tads.dsw.exemplo4_turmaB.repository.FuncionarioRepository;
 import jakarta.validation.Valid;
 
+@RestController 
+@RequestMapping("/api/funcionarios") 
 public class FuncionarioController {
 
     private final FuncionarioRepository repository;
